@@ -38,12 +38,12 @@ function Form({ input, setInput, todos, setTodos, editTodo, setEditTodo }) {
     return (
         <>
             <div>
-                <form className='flex flex-row gap-6 items-center' onSubmit={onFormSubmit}>
+                <form className='flex flex-col ms:flex-row gap-6 items-center' onSubmit={onFormSubmit}>
 
                     <div>
                         <input
                             type="text"
-                            className='block p-4 w-96 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500'
+                            className='block p-4 w-full lg:w-96 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500'
                             placeholder='Write a Todo...'
                             value={input}
                             required
@@ -52,7 +52,7 @@ function Form({ input, setInput, todos, setTodos, editTodo, setEditTodo }) {
                     </div>
 
                     <div>
-                        <button className='bg-black hover:bg-gray-900 text-white text-lg font-semibold py-2 px-4 rounded-md w-full' type='submit'>{editTodo ? 'Ok' : 'Add Todo'}</button>
+                        <button className='bg-black hover:bg-gray-900 text-white text-base md:text-lg font-semibold py-2 px-4 rounded-md w-full' type='submit'>{editTodo ? 'Ok' : 'Add Todo'}</button>
                     </div>
                 </form>
             </div>
